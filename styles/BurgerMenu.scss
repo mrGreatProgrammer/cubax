@@ -1,0 +1,29 @@
+.burger_menu {
+  position: relative;
+  height: 22px;
+  .burger_menu__line {
+    position: absolute;
+    width: 32.64px;
+    height: 5.1px;
+    background: #4899b9;
+    border-radius: 5px;
+    &:first-child {
+      top: 0px;
+    }
+    &:last-child {
+      top: 14.28px;
+    }
+  }
+}
+
+
+.burger_menu--opened{
+    >.burger_menu__line {
+        &:first-child {
+          top: 0px;
+        }
+        &:last-child {
+          top: 14.28px;
+        }
+      } 
+}
