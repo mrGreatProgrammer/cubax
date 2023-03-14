@@ -5,8 +5,41 @@ import styles from "@/styles/Home.module.scss";
 import Header from "@/components/Header/Header";
 import SubmitBtn from "@/components/forms/btn/SubmitBtn";
 import AdvantageCardContainer from "@/components/ui/AdvantageCardContainer/AdvantageCardContainer";
+import PostCard from "@/components/ui/PostCard/PostCard";
+import { PostCardProps } from "@/types/app";
+import {
+  ChipIcon,
+  DocumentIcon,
+  FloorPlansIcon,
+  HomeIcon,
+} from "@/components/ui/icons";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const postCardData: PostCardProps[] = [
+  {
+    title: "CUBAX",
+    text: "для частного домостроения",
+    img: "/imgs/8 1.png",
+    footerList: [
+      { icon: <ChipIcon />, text: "Технология" },
+      { icon: <FloorPlansIcon />, text: "Планировки" },
+      { icon: <DocumentIcon />, text: "Проекты" },
+      { icon: <HomeIcon />, text: "Варианты дизайна" },
+    ],
+  },
+  {
+    title: "CUBAX",
+    text: "для частного домостроения",
+    img: "/imgs/Одиночный_без фона_без тени_2 1.png",
+    footerList: [
+      { icon: <ChipIcon />, text: "Технология" },
+      { icon: <FloorPlansIcon />, text: "Планировки" },
+      { icon: <DocumentIcon />, text: "Проекты" },
+      { icon: <HomeIcon />, text: "Варианты дизайна" },
+    ],
+  },
+];
 
 export default function Home() {
   return (
@@ -17,28 +50,41 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.bg_image_cloudes}>
-        {/* <Image
-              alt="bg_img"
-              src={"/imgs/фон.png"}
-              width={"800"} 
-              height={"500"}
-            /> */}
-      </div>
       <Header />
       <main className={styles.main}>
-        <section className="relative">
-          <div className="txt__container">
-            <h1>
-              Быстровозводимые здания из стеклофибробетона сроком службы более
-              100 лет
+        <section className="relative h-screen">
+          <div className={styles.left__img_house} />
+          <div className={styles.center__img_house} />
+          <div className={styles.right__img_house} />
+          <div className={styles.bg_image_cloudes}></div>
+          <div className="container mx-auto txt__container max-w-6xl flex justify-center text-center">
+            <h1 className="mt-40 font-light text-5xl uppercase">
+              Быстровозводимые здания из стеклофибробетона{" "}
+              <span className="font-bold">сроком службы более 100 лет</span>
             </h1>
           </div>
-          <div className="btn__container">
+          <div className="btn__container flex justify-center mt-72 mb-14">
             <SubmitBtn onClick={() => console.log("")} txt="Оставить заявку" />
           </div>
           <div>
             <AdvantageCardContainer />
+          </div>
+        </section>
+
+        {/* SECTION TWO */}
+        <section
+          className={`relative ${styles.sectionTwo} h-screen text-white`}
+        >
+          <div className="pt-40 txt__container">
+            <h2 className="font-light text-5xl uppercase text-center">
+              Технологии будущего
+              <span className="font-bold">для любых целей</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 justify-center" >
+            {postCardData.map((e) => (
+              <PostCard {...e} />
+            ))}
           </div>
         </section>
       </main>

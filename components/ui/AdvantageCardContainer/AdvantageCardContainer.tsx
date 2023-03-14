@@ -22,7 +22,7 @@ const advantageCardsData: AdvantageCardProps[] = [
 const AdvantageCardContainer = () => {
   return (
     <div>
-      <div className="flex flex-row gap-x-5">
+      <div className="flex flex-row gap-x-5 justify-center">
         {advantageCardsData.map((e) => (
           <AdvantageCard {...e} />
         ))}

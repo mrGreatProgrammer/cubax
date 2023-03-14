@@ -12,7 +12,7 @@ const headerLinks: INavLinkType[] = [
 const HeaderNav = () => {
   return (
     <nav>
-      <ul className="flex flex-row text-txtColor uppercase gap-x-14">
+      <ul className="flex flex-row text-txtColor uppercase gap-x-14 text-base font-bold tracking-wider">
         {headerLinks.map((e) => (
           <li className="hover:text-black" key={e.id}>
             <Link href={e.link}>{e.txt}</Link>

@@ -6,6 +6,11 @@ import WindowIcon from "./WindowIcon";
 import SoundProof from "./SoundProof";
 import HeatingIcon from "./HeatingIcon";
 import HouseCalendarIcon from "./HouseCalendarIcon";
+import ChipIcon from "./ChipIcon";
+import HomeIcon from "./HomeIcon";
+import ForestIcon from "./ForestIcon";
+import DocumentIcon from "./DocumentIcon";
+import FloorPlansIcon from "./FloorPlansIcon";
 
 export {
   Logo,
@@ -16,4 +21,9 @@ export {
   SoundProof,
   HeatingIcon,
   HouseCalendarIcon,
+  ChipIcon,
+  DocumentIcon,
+  FloorPlansIcon,
+  HomeIcon,
+  ForestIcon,
 };

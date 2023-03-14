@@ -15,6 +15,7 @@ module.exports = {
         primery: "#4899B9",
         secondary: "#FF374F",
         txtColor: "#828282",
+        
       },
     },
   },
